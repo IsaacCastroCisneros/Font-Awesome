@@ -1,0 +1,78 @@
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+.container
+{
+    width: 1152px;
+    padding: 0 32px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.link,.button-awesome
+{
+    display: block;
+    font-family: Cera Round Pro Regular;
+    text-decoration: none;
+    color: rgb(24, 49, 83);
+    transition: ease-in-out 200ms, box-shadow 0s, transform 0s;
+}
+.link
+{
+    &:hover
+    {
+        color: #146ebe;
+    }
+}
+.button
+{
+    display: block;
+    font-family: Cera Round Pro Regular;
+    border: none;
+    cursor: pointer;
+    color: rgb(24, 49, 83);
+}
+.button-awesome
+{
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    padding: .9375em 2em;
+    color: rgb(24, 49, 83);
+    border: .125em solid rgb(24, 49, 83);
+    border-radius: .75em;
+    box-shadow: 0 .5em 0 rgb(24, 49, 83);
+
+    div
+    {
+       display: flex;
+    }
+    i
+    {
+        margin-right: .8em;
+        font-size: 1.09375em; 
+    }
+    &:active
+    {
+        box-shadow: unset;
+        transform: translateY(.5em);
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .container
+    {
+        width: 768px;
+        padding: 0 16px;
+    }
+}
+@media only screen and (max-width:767px) 
+{
+    .container
+    {
+        font-size: 12px;
+        padding: 0 21px;
+    }
+}

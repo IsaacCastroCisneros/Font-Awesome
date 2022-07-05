@@ -1,0 +1,87 @@
+@use '../util/extends';
+
+.brands
+{
+    width: 100%;
+    background-color: #183153;
+    padding: 3.6em 0;
+
+    &__container
+    {
+        @extend .container;
+     /*    width: 63.5em;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 2em; */
+    }
+    &__title
+    {
+        font-size: .9em;
+        letter-spacing: .3em;
+        font-family: var(--font-bolder);
+        font-weight: bolder;
+        color: #ffd442;
+        margin-bottom: 2.5em;
+    }
+    &__flex-container
+    {
+        @extend .flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        gap: 4em;
+    }
+    &__link
+    {
+        height: 1.87em;
+
+        &:hover
+        {
+            path
+            {
+                fill: #74c0fc;
+            }
+        }
+        svg
+        {
+            height: 100%;
+
+            path
+            {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+/* @media only screen and (max-width:1535px) 
+{
+    
+} */
+
+@media only screen and (max-width:1148px) 
+{
+    .brands
+    {
+        &__flex-container
+        {
+            font-size: 13px;
+            gap: 1.5em;
+        }
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .brands
+    {
+        &__container
+        {
+            font-size: 12px;
+        }
+        &__flex-container
+        {
+            font-size: 11px;
+        }
+    }
+}

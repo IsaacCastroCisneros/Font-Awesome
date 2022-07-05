@@ -1,0 +1,261 @@
+@use '../util/extends';
+
+.latest-updates
+{
+    @extend .flex, .container;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: #183153;
+    padding-bottom: 8.2em;
+  
+    &__left-container,&__right-container
+    {
+        flex: 50%;
+    }
+    &__left-container
+    {
+        padding: 0 96px 0 0;
+    }
+    &__header-strong
+    {
+        color: rgb(20 110 190);
+        letter-spacing: .3em;
+        margin-bottom: 1.5em;
+    }
+    &__subtitle
+    {
+        text-align: left;
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+    &__text-block
+    {
+        margin-bottom: 1.5em;
+    }
+    &__text-container
+    {
+        color: rgb(24, 49, 83);
+        margin-bottom: 1em;
+    }
+    &__text-title
+    {
+        margin-bottom: .6em;
+    }
+    &__text-description
+    {
+        line-height: 1.6em;
+    }
+    &__link-container
+    {
+        @extend .flex;
+        flex-wrap: wrap;
+    }
+    &__link
+    {
+        @extend .link;
+        text-decoration: underline;
+        display: flex;
+        flex: 50%;
+        padding: .5em 0;
+        color: rgb(24, 49, 83);
+        transition: ease-in-out 200ms;
+   
+        &:hover
+        {
+            color: rgb(20, 110, 190);
+        }
+    }
+    &__link-icon
+    {
+        margin-right: 1em;
+        font-size: 1.5em;
+        color: rgb(20, 110, 190);
+    }
+    &__right-container
+    {
+        padding: 0 0 0 8px;
+    }
+    &__grid-container
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);//no es necesario
+        grid-template-rows: 15.75em repeat(2,181.99px);
+        gap: 2em .7em;
+    }
+    &__grid-item
+    {
+        position: relative;
+        border-radius: 1em;
+        color: #183153;
+        overflow: hidden;
+        box-shadow: 0 .3em 0 0 rgb(195, 198, 209);
+        border: 2px solid transparent;
+
+        &--header
+        {
+            grid-column: 1 / span 2;
+        }
+
+        &--yellow-hover
+        {   
+            &:hover 
+            {
+                box-shadow: 0 .3em 0 0 #fab005;
+                border: 2px solid #fab005;
+            }
+        }
+        &--pink-hover
+        {
+            &:hover
+            {
+                box-shadow: 0 .3em 0 0 #a542bd;
+                border: 2px solid #a542bd;
+            }
+           
+        }
+        &--blue-hover
+        {
+            &:hover
+            {
+                box-shadow: 0 .3em 0 0 rgb(20, 110, 190);
+                border: 2px solid rgb(20, 110, 190);
+            }
+        }
+        &--green-hover
+        {
+            &:hover
+            {
+                box-shadow: 0 .3em 0 0 #0ca678;
+                border: 2px solid #0ca678;
+            }
+        }
+        &--purple-hover
+        {
+            &:hover
+            {
+                box-shadow: 0 .3em 0 0 #5b4fcc;
+                border: 2px solid #5b4fcc;
+            }
+        }
+
+    }
+    &__grid-icons
+    {
+        @extend .flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 58.38px);
+        top: 0;
+        left: 0;
+        background-color: #ffd43b;
+
+        &--pink
+        {
+           background-color: #e599f7;
+
+           .latest-updates__icon-flex
+           {
+               color: #a542bd;
+           } 
+        }
+        &--blue
+        {
+           @extend .flex;
+           justify-content: center;
+           background-color: #74c0fc;   
+           
+           .latest-updates__icon-flex
+           {
+               color: #183153;
+           } 
+        }
+        &--green
+        {
+           background-color: #63e6be;
+           .latest-updates__icon-flex
+           {
+               color: #0ca678;
+           }
+        }
+        &--purple
+        {
+           background-color: #b197fc;
+           .latest-updates__icon-flex
+           {
+               color: #5b4fcc;
+           }
+        }
+    }
+    &__grid-icons &__icon-flex--middle,
+    &__grid-icons &__icon-flex--center
+    {
+        width: 100%;
+        color: #183153;
+        margin: 1.5em 0;
+    }
+    &__icon-flex
+    {
+        @extend .flex;
+        justify-content: space-between;
+        color: #fab005;
+        padding: 0 .5em;
+        width: 110%;
+        
+        &--center
+        {
+            justify-content: space-around;
+        }
+    }
+    &__grid-title
+    {
+        position: absolute;
+        width: 100%;
+        padding: 1.2em 0;
+        font-size: 1em;
+        background-color: #fff;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .latest-updates
+    {
+        &__left-container
+        {
+            padding-right: 24px;
+        }
+        &__right-container
+        {
+            margin-top: 48px;
+        }
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .latest-updates
+    {
+        font-size: 12.25px;
+        flex-direction: column;
+        &__left-container
+        {
+            width: 100%;
+        }
+        &__right-container
+        {
+            width: 100%;
+            padding: 0;
+        }
+        &__grid-container
+        {
+            grid-template-rows: 15.75em repeat(2, 139.34px);
+        }
+        &__grid-icons
+        {
+            height: calc(100% - 44px );
+        }
+    }
+}

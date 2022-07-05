@@ -1,0 +1,77 @@
+@use '../util/extends';
+
+.message-block
+{   
+    padding: 16px 21px;
+}
+.message
+{
+    @extend .flex,.container;
+    width: 1472px;
+    padding:20px 24px 20px 72px;
+    border-radius: .8em;
+    color: #fff;
+    background-color: #001c40;  
+
+    &__paragraph
+    {
+        line-height: 24px;
+        position: relative;
+
+        strong
+        {
+            display: initial;
+        }
+    }
+    &__icon
+    {
+        position: absolute;
+        font-size: 1.5em;
+        left: -2em;
+        color: var(--oc-yellow-3);
+    }
+    &__link
+    {
+        @extend .link;
+        display: inline-block;
+        color: #74c0fc;
+        text-decoration:underline dotted;
+        transition: ease-in-out 200ms;
+        
+        &:hover
+        {
+            text-decoration:underline;
+            opacity: .7;
+        }
+    }
+}
+
+@media only screen and (max-width:1535px) 
+{
+    .message
+    {
+        width: 1088px;
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .message
+    {
+        width: 736px;
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .message
+    {
+        font-size: 13px;
+        padding: 13px 18px 13px 55px;
+
+        &__paragraph
+        {
+            line-height: 18.375px;
+        }
+    }
+}

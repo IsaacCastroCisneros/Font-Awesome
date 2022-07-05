@@ -1,0 +1,21 @@
+@use '../util/extends';
+
+.section
+{
+    color: #183153;
+    &__header
+    {
+        letter-spacing: .3em;
+        margin-bottom: 1.5em;
+    }
+    &__title
+    {
+        text-align: left;
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+    &__description
+    {
+        line-height: 1.6em;
+    }
+}

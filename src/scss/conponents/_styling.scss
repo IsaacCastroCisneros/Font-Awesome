@@ -1,0 +1,333 @@
+@use '../util/extends';
+
+.styling
+{
+    @extend .container,.flex;
+    align-items: flex-start;
+
+    margin-top: 5.5em;
+
+    &__visor
+    {
+        background-color: #f0f1f3;
+        border-radius: .8em;
+        overflow: hidden;
+    }
+    &__visor,&__right-container
+    {
+       flex: 50%;
+    }
+    &__item
+    {
+        flex: 1
+    }
+    &__nav
+    {
+        box-sizing: content-box;
+        border-bottom: 2px solid #fff;
+    }
+    &__list
+    {
+        @extend .flex;
+        width: 100%;
+        padding: 0 3em;
+    }
+    &__button
+    {
+        @extend .button;
+        width: 100%;
+        padding: 1.2em 0;
+        transition: ease-in-out 200ms;
+
+        &:hover strong::after, &.show strong::after
+        {
+            content: " ";
+            position: absolute;
+            bottom: -1em;
+            width: 100%;
+            border-bottom: 5px solid rgb(20, 110, 190);
+            transform: translateX(-100%);
+        }
+        strong
+        {
+            display: initial;
+            position: relative;
+            font-size: 1.2em;
+            letter-spacing: .2em;
+        }
+        &:hover strong, &.show strong
+        {
+            color: rgb(20, 110, 190);
+        }
+    }
+    &__icon-container
+    {
+        @extend .flex;
+        justify-content: center;
+        height: 21.25em;
+    }
+    &__icon
+    {
+        font-size: 10em;
+    }
+    &__options-container
+    {
+        display: block;
+        padding-bottom: 1.5em;
+    }
+    &__options
+    {
+        display: none;
+        padding: 0 2em;
+        &.show
+        {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,2em);
+            gap: .7em .5em;
+            /* grid-template-rows:  */
+        }
+    }
+    &__item
+    {
+        @extend .flex;
+        cursor: pointer;
+    
+        input
+        {
+            display: none;
+
+            &:checked + .styling__custom-input .styling__custom-checked
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        strong
+        {
+            flex: 1;
+        }
+    }
+    &__custom-input
+    {
+        position: relative;
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: .5em;
+        border-radius: 100%;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    &__custom-checked
+    {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #183153;
+
+        span
+        {
+           position: relative;
+           background-color: #fff;
+           width: .5em;
+           height: .5em;
+           border-radius: 100%;
+        }
+    }
+
+    &__html-container
+    {
+        @extend .flex;
+        background-color: #183153;
+        padding: 0 4em;
+        height: 6.5em;
+    }
+    &__html
+    {
+        display: block;
+        color: #fff;     
+    }
+
+    &__right-container
+    {
+        @extend .flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 0 5.2em;
+    }
+    &__top-title
+    {
+        color:rgb(20, 110, 190);
+    }
+    &__aside-link
+    {
+        @extend .button-awesome;
+        margin: 2em 0;
+        background-color: #74c0fc;
+        
+        &:hover
+        {
+           filter:brightness(.7);
+        }
+        &--mob
+        {
+            display: none;
+        }
+    }
+    &__link-block
+    {
+        @extend .flex;
+    }
+    &__link-container
+    {
+        @extend .flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+    }
+    &__link-item
+    {
+        flex: 50%;
+        padding: .7em 0;
+    }
+    &__link
+    {
+        @extend .link;
+        display: flex;
+        text-decoration: underline;
+
+        &-icon
+        {
+            color: #146ebe;
+            font-size: 1.2em;
+            margin-right: .8em;
+        }
+    }
+    
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .styling
+    {
+        flex-direction: column-reverse;
+
+        &__visor,&__right-container
+        {
+            width: 100%;
+        }
+        &__right-container
+        {
+            padding: 0;
+            align-items: center;
+        }
+        &__right-top-container
+        {
+            display: flex;
+
+            & > *
+            {
+               padding: 0 .5em;
+            }
+        }
+        &__description
+        {
+            flex: 0 1 47%;
+        }
+        &__link-block
+        {
+            flex: 1;
+        }
+        &__link-container
+        {
+            &--right
+            {
+               li
+               {
+                 padding-left: 2em;
+               }
+            }
+        }
+        &__aside-link
+        {
+            display: none;
+            
+            &--mob
+            {
+                display: inline-block;
+                margin: 1em 0 5em 0;
+            }
+        }
+       
+       
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .styling
+    {
+
+        &__options
+        {
+            &.show
+            {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,2em);
+            }
+        }
+        &__right-container
+        {
+
+            align-items: flex-start;
+        }
+        &__right-top-container
+        {
+            display: block;
+
+            & > *
+            {
+               flex: unset;
+            }
+        }
+        &__aside-link
+        {
+            display: block;
+            padding: .9375em 2em;
+
+            div
+            {
+                justify-content: center;
+            }
+            &--mob
+            {
+                display: none;
+            }
+        }
+        &__link-container
+        {
+            padding-bottom: 2em;
+            &--right
+            {
+               li
+               {
+                 padding-left: 0;
+               }
+            }
+        }
+        &__item
+        {
+            button
+            {
+                font-size: 9px;
+            }
+        }
+        &__icon
+        {
+           font-size: 8em;
+        }
+    }
+}

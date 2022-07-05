@@ -1,0 +1,156 @@
+@use '../util/extends';
+
+.hero-block
+{
+    position: relative;
+}
+
+.hero
+{
+    @extend .container,.flex;
+    flex-direction: column;
+    margin-top: 6.2em;
+    position: relative;
+
+    &__bg
+    {
+        position: absolute;
+        top: 0;
+    
+        &--left
+        {
+           right: 65em;
+        }
+        &--right
+        {
+           left: 65em
+        }
+    }
+    &__section
+    {
+        @extend .container,.flex;
+        width: 41em;
+        flex-direction: column;
+        margin-bottom: 3.3em;
+        padding: 0;
+    }
+    &__title
+    {
+        font-size: 3em;
+        margin-bottom: .8em;
+        font-family: var(--font-bold);
+        color: #001c40;
+    }
+    &__span
+    {
+        color: #fab006;
+    }
+    &__paragraph
+    {
+        font-size: 1.25em;
+        line-height: 1.875em;
+        text-align: center;
+        margin-bottom: 2em;
+        color: rgb(24, 49, 83);
+    }
+    &__button-container
+    {
+        @extend .flex;
+        flex-wrap: wrap;
+    }
+    &__button
+    {
+        display: flex;
+        text-decoration: none;
+        font-size: 1em;
+        padding: .9375em 2em;
+        margin: 0 .75em .875em;
+        color: rgb(24, 49, 83);
+        border: .125em solid rgb(24, 49, 83);
+        border-radius: .75em;
+        box-shadow: 0 .5em 0 rgb(24, 49, 83);
+
+        &:hover
+        {
+            background-color: rgb(195, 198, 209);
+        }
+        &--yellow
+        {
+            background-color: rgb(255, 212, 59);
+
+            &:hover
+            {
+                background-color: rgb(250, 176, 5);
+            }
+        }
+    }
+    &__button-icon
+    {
+        margin-right: .8em;
+        font-size: 1.09375em;   
+    }
+
+    &__video-container
+    {
+        position: relative;
+        width: 55.375em;
+        height: 0;
+        max-width: 100%;
+        padding-bottom: 55.25%;
+        margin-bottom: 6em;
+
+        iframe
+        {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+
+@media only screen and (max-width:767px) 
+{
+   .hero
+   {
+      font-size: 12px;
+      
+      &__button-container
+      {
+         width: 100%;
+      }
+      &__button
+      {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+      }
+   }
+   
+}
+
+@media only screen and (max-width:1148px) 
+{
+   .hero
+   {
+      &__bg
+      {
+          position: absolute;
+          top: 0;
+      
+          &--left
+          {
+             right: 50em;
+          }
+          &--right
+          {
+             left: 50em;
+          }
+      }
+   }
+   
+}
+
