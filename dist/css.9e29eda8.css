@@ -2353,6 +2353,12 @@ body {
     font-size: 12px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .footer__bottom-container {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
 
 
 
