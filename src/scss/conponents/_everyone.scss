@@ -2,13 +2,13 @@
 
 .everyone-block
 {
+    @extend .block-pad;
     background-color: #f0f1f3;
 }
 .everyone
 {
     @extend .container;
-    padding-bottom: 3.5em;
-
+    
     &__top-container
     {
         @extend .flex;
@@ -95,7 +95,7 @@
         @extend .flex;
         justify-content: center;
         flex-wrap: wrap;
-        
+
         &-box
         {
             border: 1px solid rgb(207 211 215);
@@ -160,6 +160,10 @@
         &-flex,&-box
         {
             @extend .flex;
+        }
+        &-flex
+        {
+            gap: .5em;
         }
 
     }

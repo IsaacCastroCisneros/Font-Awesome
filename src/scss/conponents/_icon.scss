@@ -1,0 +1,175 @@
+@use '../util/extends';
+
+.icon-block
+{
+    @extend .block-pad;
+    background-color: #f0f1f3;
+}
+
+.icon
+{
+    @extend .container;
+
+    &__top-container
+    {
+        @extend .flex;
+        align-items: flex-start;
+        margin-bottom: 6em;
+    }
+    &__section
+    {
+        @extend .flex;
+        justify-content: center;
+        flex: 0 1 653px;
+        
+        img:not(.icon__img)
+        {
+            display: none;
+        }
+    }
+    &__img
+    {
+        &:hover
+        {
+           display: none;
+        }
+        &:hover + img
+        {
+           display: block;
+        }
+    }
+    &__aside
+    {
+        flex: 1;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &__header
+    {
+        color: #9c36b5;
+    }
+
+    &__box
+    {
+        position: relative;
+        text-decoration: none;
+        background-color: #fff;
+        min-height: 294px;
+        border: 2px solid transparent;
+        box-shadow: 0 .3em 0 0 rgb(195, 198, 209);
+        
+        &:hover,&:focus
+        {
+            border-color: #e599f7;
+            box-shadow: 0 .3em 0 0 #e599f7;
+        }
+        &--border
+        {
+            &:hover,&:focus
+            {
+                border-color: #9f13be;
+                box-shadow: 0 .3em 0 0 #9f13be;
+            }
+        }
+        &:active
+        {
+           @extend .button-animation;
+           box-shadow: unset;
+        }
+
+        &-icon
+        {
+           color: #fff;
+           &--pink
+           {
+              background-color: #e599f7;
+              color: #183153;
+           }
+        }
+        &-title
+        {
+            @extend .flex;
+            font-size: 1em;
+            width: 100%;
+            justify-content: space-between;
+
+            strong
+            {
+                color: rgb(156, 54, 181);
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .icon
+    {
+        &__top-container
+        {
+            flex-direction: row-reverse;
+        }
+        &__section,&__aside
+        {
+            flex: 50%;
+        }
+        &__section
+        {
+            position: relative;
+            img
+            {
+                position: absolute;
+                top: 0;
+                width: 135%;
+                left: 2em;
+            }
+        }
+        &__aside
+        {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__box
+        {
+            min-height:252px;
+        }
+
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .icon
+    {
+        &__top-container
+        {
+            flex-direction: column;
+            margin-bottom: 3.5em;
+        }
+        &__section,&__aside
+        {
+            width: 100%;
+        }
+        &__section
+        {
+            padding: 0 36px;
+
+            img
+            {
+                position: relative;
+                width: 100%;
+                left: 0;
+            }
+        }
+        &__aside
+        {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__box
+        {
+            min-height: 178px;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+@use '../util/extends';
+
+.future-block
+{
+    @extend .block-pad;
+}
+
+.future
+{
+    @extend .container;
+
+    &__top-container
+    {
+        @extend .flex;
+        align-items: flex-start;
+        margin-bottom: 6em;
+    }
+    &__section
+    {
+        flex: 0 1 466px;
+        padding-right: 16px;
+    }
+    &__header
+    {
+        color:rgb(12, 166, 120);
+    }
+    &__description
+    {
+        margin-bottom: 2.8em;
+    }
+    &__aside
+    {
+        @extend .flex;
+        justify-content: center;
+        flex: 1;
+        padding: 0 16px;
+        
+        img
+        {
+            width: 584px;
+            height: 480px;
+        }
+    }
+    &__link
+    {
+        @extend .button-awesome;
+        background-color: rgb(99, 230, 190);
+
+        &:hover
+        {
+            background-color: rgb(12, 166, 120);
+        }
+    }
+
+    &__box
+    {
+        min-height: 362px;
+        background-color: #f0f1f3;
+        
+        &-icon
+        {
+            height: 136px;
+            color:#63e6be;
+
+            &--green
+            {
+                background-color: #63e6be;
+                color: #183153;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1148px) 
+{
+   .future
+   {
+      &__section
+      {
+         flex: 0 1 55%;
+         padding-right: 0;
+      }
+      &__aside
+      {
+         flex: 1;
+         position: relative;
+
+         img
+         {
+            position: absolute;
+            top: 0;
+            height: initial;
+            width: 170%;
+            left: 2.8em;
+         }
+      }
+
+      &__box
+      {
+         flex: calc(50% - 2em / 2 );
+         min-height: 318px;
+      }
+   }
+
+}
+
+@media only screen and (max-width:767px) 
+{
+    .future
+   {
+      &__top-container
+      {
+         flex-direction: column-reverse;
+         margin-bottom: 3.5em;
+      }
+      &__section,&__aside,&__link
+      {
+         width: 100%;
+      }
+      &__section
+      {
+         padding-right: 0;
+      }
+      &__link
+      {
+         display: flex;
+         justify-content: center;
+      }
+      &__aside
+      {
+         position: relative;
+         padding: 0 36.75px;
+
+         img
+         {
+            position: initial;
+            top: 0;
+            height: initial;
+            width: 100%;
+            left: 2.8em;
+         }
+      }
+      &__bottom-container
+      {
+         gap: 1.3em;
+      }       
+      &__box
+      {
+         flex: 100%;
+         min-height: 194px;
+      }
+     
+   }
+
+}

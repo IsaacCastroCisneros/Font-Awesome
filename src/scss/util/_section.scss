@@ -3,6 +3,8 @@
 .section
 {
     color: #183153;
+    padding-top: 96px;
+
     &__header
     {
         letter-spacing: .3em;
@@ -11,11 +13,27 @@
     &__title
     {
         text-align: left;
-        font-size: 1.8em;
+        font-size: 2em;
         margin-bottom: 1em;
     }
     &__description
     {
         line-height: 1.6em;
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+   .section
+   {
+      padding-top: 64px;
+   }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .section
+    {
+       padding-top: 49px;
     }
 }

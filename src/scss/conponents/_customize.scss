@@ -1,0 +1,221 @@
+@use '../util/extends';
+
+.customize-block
+{
+   @extend .block-pad;
+}
+.customize
+{
+    @extend .container;
+  
+    &__top-container
+    {
+        @extend .flex;
+        align-items: flex-start;
+        margin-bottom: 75px;
+    }
+    &__section, &__aside
+    {
+        flex: 50%;
+    }
+    &__section
+    {
+        padding: 6em 6em 0 0;
+    }
+    &__header
+    {
+        color: rgb(250, 176, 5);
+    }
+    &__description
+    {
+        margin-bottom: 2.3em;
+    }
+    &__form
+    {
+        @extend .flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1em;
+
+        &-label
+        {
+            font-family: var(--font-bolder);
+        }
+        &-input
+        {
+            font-size: 16px;
+            width: 100%;
+            padding: 1.1em 1.4em;
+            border-radius: .5em;
+            outline: none;
+            border: 2px solid rgb(95, 105, 125);
+
+            &::placeholder
+            {
+                font-family: Cera Round Pro regular;
+            }
+            &:focus
+            {
+                border-color: rgb(48, 99, 241);
+            }
+        }
+        &-button
+        {
+            @extend .button-awesome;
+            background-color: #ffd43b;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            cursor: pointer;
+
+            &:hover
+            {
+                background-color: rgb(250, 176, 5);
+            }
+        }
+    }
+
+    &__aside
+    {
+        @extend .flex;
+        justify-content: space-around;
+        padding: 0 1em;
+    }
+    &__sun
+    {
+        &:hover
+        {
+            display: none;
+        }
+        &:hover + .customize__moon
+        {
+            display: block;
+        }
+    }
+    &__moon
+    {
+        display: none;
+    }
+
+    &__bottom-container
+    {
+        @extend .flex;
+        flex-wrap: wrap;
+    }
+    &__box
+    {
+        @extend .flex;
+        flex: 50%;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2em;
+        padding-right: 1em;
+
+        &-icon
+        {
+            position: relative;
+            font-size: 1.8em;
+            color: #fab005;
+            flex: 0 1 2em;
+        }
+        &-section
+        {
+            flex: 1;
+
+            h3
+            {
+               text-align: left;
+               margin-bottom: .8em;
+            }
+            p
+            {
+                font-size: .875em;
+            }
+        }   
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+    .customize
+    {
+        &__section
+        {
+            padding: 0;
+            padding-top: 4em;
+        }
+        &__form
+        {
+            &-input
+            {
+                font-size: 12px;
+            }
+        }
+        &__aside
+        {
+            position: relative;
+            img
+            {
+                top: 0;
+                left: 3.5em;
+                width: 137%;
+                position: absolute;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .customize
+    {
+        &__top-container
+        {
+            flex-direction: column-reverse;
+        }
+        &__section,&__aside
+        {
+            width: 100%;
+        }
+        &__section
+        {   
+            padding: 0;
+            padding-top: 49px;
+        }
+        &__aside
+        {
+            position: relative;
+            justify-content: center;
+            padding: 0 36px;
+
+            img
+            {
+                top: 0;
+                left: 0;
+                width: 100%;
+                position: relative;
+            }
+        }
+        &__bottom-container
+        {
+            flex-direction: column;
+        }
+        &__box
+        {
+            width: 100%;
+            padding-right: 0;
+
+            &-icon
+            {
+               text-align: left;
+            }
+            &-section
+            {
+               flex: 85%;
+            }
+        }
+    }
+}

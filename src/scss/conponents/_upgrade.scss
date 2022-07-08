@@ -1,0 +1,60 @@
+@use '../util/extends';
+
+.upgrade-block
+{
+    background-image: url(../dist-files/images/upgrade/pro-upgrade-bg.svg);
+    background-color: #ffd43b;
+    padding: 3em 0;
+}
+
+.upgrade
+{
+    @extend .container,.flex;
+
+    &__section
+    {
+        flex: 0 1 55%;
+    }
+    &__aside
+    {
+        flex: 1;
+        text-align: right;
+    }
+    &__link
+    {
+        @extend .button-awesome;
+        background-color: #fff;
+
+        &:hover
+        {
+            background-color: #c3c6d1;
+        }
+    }
+    &__header
+    {
+        margin-bottom: 10px;
+    }
+    &__description
+    {
+        line-height: 24px;
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .upgrade
+    {
+        flex-direction: column;
+
+        &__section,&__aside,&__link
+        {
+            width: 100%;
+        }
+        &__link
+        {
+            margin-top: 1.5em;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

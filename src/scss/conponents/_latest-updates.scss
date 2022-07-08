@@ -3,6 +3,7 @@
 .latest-updates
 {
     @extend .flex, .container;
+    position: relative;
     align-items: flex-start;
     flex-wrap: wrap;
     color: #183153;

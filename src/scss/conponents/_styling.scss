@@ -4,8 +4,8 @@
 {
     @extend .container,.flex;
     align-items: flex-start;
-
-    margin-top: 5.5em;
+    padding-bottom: 5.5em;
+    padding-top: 5.5em;
 
     &__visor
     {

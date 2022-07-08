@@ -1,0 +1,223 @@
+@use  '../util/extends';
+
+.the-right-block
+{
+    @extend .block-pad;
+    overflow: hidden;
+    background-color: #f0f1f3;
+}
+.the-right
+{
+    @extend .container;
+  
+    &__top-container
+    {
+        @extend .flex;
+        align-items: flex-start;
+        height: 26.6em;
+        margin-bottom: 4em;
+    }
+    &__section
+    {
+        @extend .flex;
+        justify-content: center;
+        flex: 0 1 59%;
+        position: relative;
+        height: 100%;
+        padding: 0 1em 0 0;
+
+        img
+        {
+           
+            position: absolute;
+            bottom: 0;
+            width: 584px;
+            height: 500px;
+            
+        }
+    }
+    &__aside
+    {
+        flex: 1;
+        padding-left: 2.5em;
+    }
+    &__header
+    {
+        color: rgb(20 110 190);
+    }
+
+    &__bottom-container
+    {
+        @extend .flex;
+        gap: 1.8em;
+        align-items: flex-start;
+    }
+    &__box
+    {
+        flex: 1;
+
+        &--blue
+        {
+           i
+           {
+              color:rgb(20, 110, 190);
+           }
+           a
+           {
+              &:focus,&:hover
+              {
+                  border-color:rgb(20, 110, 190);
+                  box-shadow: 0 .3em 0 rgb(20, 110, 190);
+              }
+           }
+        }
+        &--purple
+        {
+            i
+            {
+              color:rgb(156, 54, 181);
+            }
+            a
+            {
+               &:focus,&:hover
+               {
+                   border-color:rgb(156, 54, 181);
+                   box-shadow: 0 .3em 0 rgb(156, 54, 181);
+               }
+            }
+        }
+        &--green
+        {
+            i
+            {
+              color:rgb(12, 166, 120);
+            }
+            a
+            {
+               &:focus,&:hover
+               {
+                   border-color:rgb(12, 166, 120);
+                   box-shadow: 0 .3em 0 rgb(12, 166, 120);
+               }
+            }
+        }
+        &-icon
+        {
+            font-size: 3em;
+            margin-bottom: .5em;
+        }
+        &-title
+        {
+            margin-bottom: .4em;
+        }
+        &-description
+        {
+            font-size: .8em;
+            line-height: 21px;
+            margin-bottom: 2em;
+        }
+        &-link
+        {
+            @extend .flex;
+            position: relative;
+            text-decoration: none;
+            /* padding: 1.2em 0 1.2em 1.8em; */
+            padding: .62em;
+            background-color: #fff;
+            margin-bottom: 1.1em;
+            border-radius: .8em;
+            box-shadow: 0 .3em 0 rgb(195, 198, 209);
+            border: 2px solid transparent;        
+           /*  strong
+            {
+                flex: 1;
+            } */
+        }
+        &-link-icon
+        {
+           /*  flex: 0 1 13%; */
+            padding: 9px 20px;
+            font-size: 1.5em;
+        }
+        & a:active
+        {
+            box-shadow: unset;
+            transform: translateY(.3em);
+        }
+
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+   .the-right
+   {
+      &__top-container
+      {
+         flex-direction: row-reverse;
+         height: fit-content;
+      }
+      &__section,&__aside
+      {
+         flex:50%;
+      }
+      &__section
+      {
+          img
+          { 
+            position: absolute;
+            top: -8em;
+            left: 3.5em;
+            width: 150%;
+            height: initial;
+          }
+      }
+      &__aside
+      {
+         padding-left:0;
+      }
+   }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .the-right
+    {
+       &__top-container
+       {
+          flex-direction: column;
+          height: fit-content;
+       }
+       &__section,&__aside
+       {
+          width: 100%;
+       }
+       &__section
+       {
+           padding: 0 36.75px;
+
+           img
+           { 
+             position: relative;
+             margin-top: -5em;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: initial;
+           }
+       }
+       &__aside
+       {
+          padding-left:0;
+       }
+
+       &__bottom-container
+       {
+          flex-direction: column;
+       }
+       &__box
+       {
+          width: 100%;
+       }
+    }
+}

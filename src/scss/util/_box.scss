@@ -1,0 +1,64 @@
+.box-container
+{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.box
+{
+    flex: 1;
+    overflow: hidden;
+    border-radius: .8em;
+
+    &__icon
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+        width: 100%;
+        height: 136px;
+        background-color:#183153;
+    }
+    &__container
+    {
+        padding:20px 24px;
+    }
+    &__title
+    {
+        font-size: 1.25em;
+        font-family: var(--font-bolder);
+        margin-bottom: .8em;
+    }
+    &__description
+    {
+        font-size: .875em;
+    }
+}
+
+@media only screen and (max-width:1148px) 
+{
+   .box
+   {
+       flex: calc(50% - 2em / 2 );
+   }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .box
+    {
+        flex: 100%;
+
+        &__container
+        {
+            padding: 15px 18px;
+        }
+        &__icon
+        {
+          height: 104px;
+        }
+    }
+}
