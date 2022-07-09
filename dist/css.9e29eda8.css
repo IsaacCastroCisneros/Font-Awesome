@@ -1,3 +1,55 @@
+@font-face 
+{
+    font-family: 'Cera Round Pro Regular';
+    font-style: normal;
+    font-weight: normal bolder;
+    src: local('Cera Round Pro Regular'), url('/TypeMates  CeraRoundProRegular.6c7ccf15.woff') format('woff');
+}
+
+
+@font-face 
+{
+    font-family: 'Cera Round Pro Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cera Round Pro Thin'), url('/TypeMates  CeraRoundProThin.72261ed4.woff') format('woff');
+}
+
+
+@font-face 
+{
+    font-family: 'Cera Round Pro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cera Round Pro Light'), url('/TypeMates  CeraRoundProLight.664ea6a4.woff') format('woff');
+}
+
+
+@font-face 
+{
+    font-family: 'Cera Round Pro Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cera Round Pro Medium'), url('/TypeMates  CeraRoundProMedium.e2c8af66.woff') format('woff');
+}
+
+
+@font-face 
+{
+    font-family: 'Cera Round Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cera Round Pro Bold'), url('/TypeMates  Cera Round Pro Bold.07087a19.woff') format('woff');
+}
+
+
+@font-face 
+{
+    font-family: 'Cera Round Pro Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cera Round Pro Black'), url('/TypeMates  CeraRoundProBlack.90c63653.woff') format('woff');
+}
 * {
   padding: 0;
   margin: 0;
@@ -52,42 +104,6 @@ body {
   color: #183153;
 }
 
-@font-face {
-  font-family: "Cera Round Pro Regular";
-  font-style: normal;
-  font-weight: normal bolder;
-  src: local("Cera Round Pro Regular"), url("/TypeMates  CeraRoundProRegular.c4adcdcc.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Thin";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Thin"), url("/TypeMates  CeraRoundProThin.5712d84a.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Light"), url("/TypeMates  CeraRoundProLight.3e4dc2f0.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Medium"), url("/TypeMates  CeraRoundProMedium.e35b1aca.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Bold"), url("/TypeMates  Cera Round Pro Bold.5de7a21e.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Black";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Black"), url("/TypeMates  CeraRoundProBlack.cab9ff47.woff") format("woff");
-}
 :root {
   --font-bold: "Cera Round Pro Medium";
   --font-bolder:"Cera Round Pro Bold";

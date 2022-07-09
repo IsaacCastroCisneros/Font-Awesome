@@ -48,5 +48,5 @@
     font-family: 'Cera Round Pro Black';
     font-style: normal;
     font-weight: normal;
-    src: local('Cera Round Pro Black'), url('./fonts/TypeMates  CeraRoundProBlack.woff') format('woff');
+    src: local('Cera Round Pro Black'), url('./TypeMates  CeraRoundProBlack.woff') format('woff');
 }

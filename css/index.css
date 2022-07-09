@@ -1,3 +1,4 @@
+@import url("./font.css");
 * {
   padding: 0;
   margin: 0;
@@ -52,42 +53,6 @@ body {
   color: #183153;
 }
 
-@font-face {
-  font-family: "Cera Round Pro Regular";
-  font-style: normal;
-  font-weight: normal bolder;
-  src: local("Cera Round Pro Regular"), url("./fonts/TypeMates  CeraRoundProRegular.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Thin";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Thin"), url("./fonts/TypeMates  CeraRoundProThin.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Light"), url("./fonts/TypeMates  CeraRoundProLight.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Medium"), url("./fonts/TypeMates  CeraRoundProMedium.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Bold"), url("./fonts/TypeMates  Cera Round Pro Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Cera Round Pro Black";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Cera Round Pro Black"), url("./fonts/TypeMates  CeraRoundProBlack.woff") format("woff");
-}
 :root {
   --font-bold: "Cera Round Pro Medium";
   --font-bolder:"Cera Round Pro Bold";
