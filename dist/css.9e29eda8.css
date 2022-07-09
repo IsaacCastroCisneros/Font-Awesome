@@ -56,37 +56,37 @@ body {
   font-family: "Cera Round Pro Regular";
   font-style: normal;
   font-weight: normal bolder;
-  src: local("Cera Round Pro Regular"), url("./fonts/TypeMates  CeraRoundProRegular.woff") format("woff");
+  src: local("Cera Round Pro Regular"), url("/TypeMates  CeraRoundProRegular.c4adcdcc.woff") format("woff");
 }
 @font-face {
   font-family: "Cera Round Pro Thin";
   font-style: normal;
   font-weight: normal;
-  src: local("Cera Round Pro Thin"), url("./fonts/TypeMates  CeraRoundProThin.woff") format("woff");
+  src: local("Cera Round Pro Thin"), url("/TypeMates  CeraRoundProThin.5712d84a.woff") format("woff");
 }
 @font-face {
   font-family: "Cera Round Pro Light";
   font-style: normal;
   font-weight: normal;
-  src: local("Cera Round Pro Light"), url("./fonts/TypeMates  CeraRoundProLight.woff") format("woff");
+  src: local("Cera Round Pro Light"), url("/TypeMates  CeraRoundProLight.3e4dc2f0.woff") format("woff");
 }
 @font-face {
   font-family: "Cera Round Pro Medium";
   font-style: normal;
   font-weight: normal;
-  src: local("Cera Round Pro Medium"), url("./fonts/TypeMates  CeraRoundProMedium.woff") format("woff");
+  src: local("Cera Round Pro Medium"), url("/TypeMates  CeraRoundProMedium.e35b1aca.woff") format("woff");
 }
 @font-face {
   font-family: "Cera Round Pro Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Cera Round Pro Bold"), url("./fonts/TypeMates  Cera Round Pro Bold.woff") format("woff");
+  src: local("Cera Round Pro Bold"), url("/TypeMates  Cera Round Pro Bold.5de7a21e.woff") format("woff");
 }
 @font-face {
   font-family: "Cera Round Pro Black";
   font-style: normal;
   font-weight: normal;
-  src: local("Cera Round Pro Black"), url("./fonts/TypeMates  CeraRoundProBlack.woff") format("woff");
+  src: local("Cera Round Pro Black"), url("/TypeMates  CeraRoundProBlack.cab9ff47.woff") format("woff");
 }
 :root {
   --font-bold: "Cera Round Pro Medium";
@@ -2224,7 +2224,7 @@ body {
   }
 }
 .upgrade-block {
-  background-image: url(../dist-files/images/upgrade/pro-upgrade-bg.svg);
+  background-image: url(/pro-upgrade-bg.2830bf6c.svg);
   background-color: #ffd43b;
   padding: 3em 0;
 }
@@ -2360,4 +2360,7 @@ body {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+
+
+
+/*# sourceMappingURL=/css.9e29eda8.css.map */
