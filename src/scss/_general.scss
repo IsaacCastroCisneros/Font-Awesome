@@ -1,10 +1,18 @@
-@import  url("./font.css");
 
 * 
 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body 
+{
+    height: 100vh;
+    font-family: Cera Round Pro Regular;
+    overflow-x: hidden;
+    color: rgb(24, 49, 83);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
 }
 
 div,
@@ -30,7 +38,7 @@ h3,
 h5
 {
     text-align: center;
-    font-family: 'Cera Round Pro Bold';
+    font-weight: 700;
 }
 h3
 {
@@ -38,7 +46,7 @@ h3
 }
 strong,input
 {
-    font-family: 'Cera Round Pro Bold';
+    font-weight: 700;
 }
 html 
 {
@@ -46,12 +54,5 @@ html
 }
 a
 {
-    color: rgb(24, 49, 83);
-}
-body 
-{
-    height: 100vh;
-    font-family: Cera Round Pro Regular;
-    overflow-x: hidden;
     color: rgb(24, 49, 83);
 }

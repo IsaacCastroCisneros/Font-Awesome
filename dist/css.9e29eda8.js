@@ -184,17 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../css/font.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../css/index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\TypeMates  CeraRoundProRegular.woff":[["TypeMates  CeraRoundProRegular.6c7ccf15.woff","../css/fonts/TypeMates  CeraRoundProRegular.woff"],"../css/fonts/TypeMates  CeraRoundProRegular.woff"],"./fonts\\TypeMates  CeraRoundProThin.woff":[["TypeMates  CeraRoundProThin.72261ed4.woff","../css/fonts/TypeMates  CeraRoundProThin.woff"],"../css/fonts/TypeMates  CeraRoundProThin.woff"],"./fonts\\TypeMates  CeraRoundProLight.woff":[["TypeMates  CeraRoundProLight.664ea6a4.woff","../css/fonts/TypeMates  CeraRoundProLight.woff"],"../css/fonts/TypeMates  CeraRoundProLight.woff"],"./fonts\\TypeMates  CeraRoundProMedium.woff":[["TypeMates  CeraRoundProMedium.e2c8af66.woff","../css/fonts/TypeMates  CeraRoundProMedium.woff"],"../css/fonts/TypeMates  CeraRoundProMedium.woff"],"./fonts\\TypeMates  Cera Round Pro Bold.woff":[["TypeMates  Cera Round Pro Bold.07087a19.woff","../css/fonts/TypeMates  Cera Round Pro Bold.woff"],"../css/fonts/TypeMates  Cera Round Pro Bold.woff"],"./TypeMates  CeraRoundProBlack.woff":[["TypeMates  CeraRoundProBlack.90c63653.woff","../css/TypeMates  CeraRoundProBlack.woff"],"../css/TypeMates  CeraRoundProBlack.woff"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../css/index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./font.css":"../css/font.css","./..\\dist-files\\images\\upgrade\\pro-upgrade-bg.svg":[["pro-upgrade-bg.2830bf6c.svg","../dist-files/images/upgrade/pro-upgrade-bg.svg"],"../dist-files/images/upgrade/pro-upgrade-bg.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\dist-files\\images\\upgrade\\pro-upgrade-bg.svg":[["pro-upgrade-bg.2830bf6c.svg","../dist-files/images/upgrade/pro-upgrade-bg.svg"],"../dist-files/images/upgrade/pro-upgrade-bg.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -222,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51752" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

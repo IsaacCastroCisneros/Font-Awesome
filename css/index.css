@@ -1,8 +1,16 @@
-@import url("./font.css");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Cera Round Pro Regular;
+  overflow-x: hidden;
+  color: #183153;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 300;
 }
 
 div,
@@ -27,7 +35,7 @@ h1,
 h3,
 h5 {
   text-align: center;
-  font-family: "Cera Round Pro Bold";
+  font-weight: 700;
 }
 
 h3 {
@@ -35,7 +43,7 @@ h3 {
 }
 
 strong, input {
-  font-family: "Cera Round Pro Bold";
+  font-weight: 700;
 }
 
 html {
@@ -46,15 +54,8 @@ a {
   color: #183153;
 }
 
-body {
-  height: 100vh;
-  font-family: Cera Round Pro Regular;
-  overflow-x: hidden;
-  color: #183153;
-}
-
 :root {
-  --font-bold: "Cera Round Pro Medium";
+  --font-bold: "Varela Round", sans-serif;
   --font-bolder:"Cera Round Pro Bold";
   --oc-white: #fff;
   --oc-black: #000;
@@ -204,7 +205,7 @@ body {
 
 .link, .footer__description a, .footer__link, .footer__bottom-container a, .styling__link, .everyone__git-link, .latest-updates__link, .message__link, .nav-bar__link, .nav-bar__mob-link, .nav-bar__sigin-link, .button-awesome, .upgrade__link, .future__link, .customize__form-button, .styling__aside-link, .everyone__link {
   display: block;
-  font-family: Cera Round Pro Regular;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   text-decoration: none;
   color: #183153;
   transition: ease-in-out 200ms, box-shadow 0s, transform 0s;
@@ -216,7 +217,7 @@ body {
 
 .button, .styling__button, .nav-bar__menu-button {
   display: block;
-  font-family: Cera Round Pro Regular;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   border: none;
   cursor: pointer;
   color: #183153;
@@ -275,6 +276,7 @@ body {
 .section__header {
   letter-spacing: 0.3em;
   margin-bottom: 1.5em;
+  font-weight: 900;
 }
 .section__title {
   text-align: left;
@@ -321,7 +323,7 @@ body {
 }
 .box__title {
   font-size: 1.25em;
-  font-family: var(--font-bolder);
+  font-weight: 700;
   margin-bottom: 0.8em;
 }
 .box__description {
@@ -615,7 +617,7 @@ body {
 .hero__title {
   font-size: 3em;
   margin-bottom: 0.8em;
-  font-family: var(--font-bold);
+  font-weight: 700;
   color: #001c40;
 }
 .hero__span {
@@ -717,6 +719,7 @@ body {
   color: #146ebe;
   letter-spacing: 0.3em;
   margin-bottom: 1.5em;
+  font-weight: 900;
 }
 .latest-updates__subtitle {
   text-align: left;
@@ -894,8 +897,7 @@ body {
 .brands__title {
   font-size: 0.9em;
   letter-spacing: 0.3em;
-  font-family: var(--font-bolder);
-  font-weight: bolder;
+  font-weight: 900;
   color: #ffd442;
   margin-bottom: 2.5em;
 }
@@ -973,7 +975,7 @@ body {
 }
 .everyone__box {
   flex: 1;
-  height: 18.625em;
+  height: 19.5em;
   background-color: #fff;
   border-radius: 1em;
   flex-direction: column;
@@ -1374,7 +1376,8 @@ body {
   border: 2.5px solid #183153;
 }
 .icon-discovery__input-container input::placeholder {
-  font-family: Cera Round Pro regular;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 100;
 }
 .icon-discovery__input-container input:focus {
   border: 2.5px solid #3063f1;
@@ -1714,7 +1717,7 @@ body {
   gap: 1em;
 }
 .customize__form-label {
-  font-family: var(--font-bolder);
+  font-weight: 900;
 }
 .customize__form-input {
   font-size: 16px;
@@ -1725,7 +1728,8 @@ body {
   border: 2px solid #5f697d;
 }
 .customize__form-input::placeholder {
-  font-family: Cera Round Pro regular;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 100;
 }
 .customize__form-input:focus {
   border-color: #3063f1;

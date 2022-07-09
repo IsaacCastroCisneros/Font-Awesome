@@ -40,7 +40,7 @@
 
         &-label
         {
-            font-family: var(--font-bolder);
+            font-weight: 900;
         }
         &-input
         {
@@ -53,7 +53,8 @@
 
             &::placeholder
             {
-                font-family: Cera Round Pro regular;
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-weight: 100;
             }
             &:focus
             {
